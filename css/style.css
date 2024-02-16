@@ -1,14 +1,15 @@
 :root {
-  --sans: Lato, sans-serif;
-  --medium: Montserrat, sans-serif;
-  --josefin: Josefin Sans, sans-serif;
-  --yeseva: Yeseva One, serif;
+  --serif: Josefin Sans, sans-serif;
+  --title: Yeseva One, serif;
   --font-size: 1.3rem;
-  --dark: #211c6a;
-  --blue: #59b4c3;
-  --green: #74e291;
-  --yellow: #eff396;
-  --darkGreen: #5eb977;
+  --background: #e0e5e8;
+  --primary: #3d6b85;
+  --secondary: #b0c9d9;
+  --accent-1: #6fa1a6;
+  --accent-2: #b54a39;
+  --text: #262626;
+  --deep-yellow: #d19a1c;
+  --coral: #ef9887;
 }
 
 html {
@@ -24,15 +25,16 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--josefin);
-  background-color: var(--dark);
-  color: white;
+  font-family: var(--serif);
+  background-color: var(--background);
+  color: var(--text);
   font-size: var(--font-size);
 }
 
 h1,
 h2,
 h3 {
+  /* Titles only will receive this styling */
   margin: 0;
 }
 
@@ -41,34 +43,35 @@ img {
 }
 
 a {
-  color: white;
+  color: var(--text);
 }
 
 a:hover {
-  color: var(--yellow);
+  color: var(--accent-1);
   text-decoration: none;
 }
 
 /*Navbar Styles*/
 
 nav {
-  font-family: var(--josefin);
+  font-family: var(--serif);
   font-size: 90%;
   padding: 2rem 2rem;
+  text-align: center;
 }
 
 nav [class*='fa-'] {
   font-size: 150%;
-  color: var(--blue);
+  color: var(--accent-1);
 }
 
 nav h1 [class*='fa-'] {
   font-size: 100%;
-  color: var(--blue);
+  color: var(--accent-1);
 }
 
 nav h1 a {
-  font-family: var(--josefin);
+  font-family: var(--serif);
 }
 
 nav ul {
@@ -93,14 +96,14 @@ nav li:first-child:hover {
 }
 
 nav a {
-  color: white;
+  color: var(--text);
   text-decoration: none;
   display: block;
 }
 
 .button {
-  background-color: var(--blue);
-  padding: 0.4rem;
+  background-color: var(--accent-1);
+  padding: 0.5rem;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
   color: white;
@@ -108,9 +111,8 @@ nav a {
 }
 
 .button:hover {
-  color: black;
-  background-color: var(--yellow);
   transform: scale(1.05);
+  color: white;
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -161,9 +163,9 @@ nav a {
 
 .name span {
   font-size: 4rem;
-  color: var(--green);
+  color: var(--primary);
   display: block;
-  font-family: var(--yeseva);
+  font-family: var(--title);
 }
 
 #intro h2 {
@@ -174,7 +176,7 @@ nav a {
 /* Projects styles */
 
 #projects-back {
-  background-color: var(--blue);
+  background-color: var(--accent-1);
 }
 
 #projects {
@@ -188,14 +190,15 @@ article {
 }
 
 #projects h2 {
-  font-family: var(--yeseva);
+  font-family: var(--title);
   font-size: 2.5rem;
-  margin-bottom: calc(2.5rem * 1.5);
+  margin-bottom: calc(2rem * 1.5);
+  color: var(--background);
 }
 
 #projects h3 {
-  color: var(--yellow);
-  font-family: var(--yeseva);
+  color: var(--background);
+  font-family: var(--title);
   font-size: 2rem;
 }
 
@@ -221,11 +224,13 @@ article {
 }
 
 .blackbox {
-  background-color: var(--dark);
+  background-color: var(--background);
   padding: 1rem;
   border-radius: 10px;
-  color: white;
+  color: var(--text);
   font-size: 1rem;
+  box-shadow: 0 0 5px 2px rgba(0, 10, 10, 0.5);
+  transition: all 0.4s ease-in-out;
 }
 
 #projects img {
@@ -233,15 +238,13 @@ article {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
-  border: var(--green) solid 2px;
 }
 
 #projects img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.5);
-  border: var(--green) solid 6px;
 }
 
 #projects .reverse .text {
@@ -261,7 +264,7 @@ article {
 /*Contact styles*/
 
 .section-back {
-  background-color: var(--darkGreen);
+  background-color: var(--deep-yellow);
 }
 
 #contact {
@@ -269,43 +272,42 @@ article {
   margin: 0 auto;
   text-align: center;
   padding: 3rem 0;
+  color: white;
 }
 
 #contact h2 {
-  font-family: var(--yeseva);
+  font-family: var(--title);
+  color: white;
 }
 
 #contact .button {
   padding: 0.5rem;
   border-radius: 5px;
-  background-color: var(--yellow);
-  color: black;
+  background-color: var(--secondary);
+  color: var(--text);
   border: black solid 2px;
 }
 
-#contact .button:hover {
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
-}
-
+/* Container for the gradient line */
 .gradient {
-  position: relative;
   height: 3px;
+  background-image: linear-gradient(
+    to right,
+    var(--primary) 0%,
+    var(--secondary) 50%,
+    var(--accent-1) 100%
+  );
+  background-size: 300% 100%; /* Stretch the gradient  */
+  animation: gradient-animation 5s ease-in-out infinite;
 }
 
-.gradient::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #eff396 0%, #74e291 50%, #eff396 100%);
-  animation: gradient-shift 5s infinite linear;
-}
-
-@keyframes gradient-shift {
+/* Animation for the gradient */
+@keyframes gradient-animation {
   0% {
-    background-position: 0 50%;
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
   }
   100% {
     background-position: 100% 50%;
@@ -322,13 +324,13 @@ article {
 }
 
 #footer h2 {
-  font-family: var(--yeseva);
+  font-family: var(--title);
   font-size: 2.5rem;
 }
 
 #footer ul {
   list-style-type: none;
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding: 20px;
   display: flex;
   flex-flow: row wrap;
@@ -338,10 +340,10 @@ article {
 }
 
 #footer li [class*='fa-'] {
-  font-size: 100%;
-  color: var(--blue);
+  font-size: 3rem;
+  color: var(--primary);
 }
 
 #footer li [class*='fa-']:hover {
-  color: var(--green);
+  color: var(--secondary);
 }
