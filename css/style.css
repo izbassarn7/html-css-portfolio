@@ -14,6 +14,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -185,6 +186,19 @@ nav a {
   margin: 0 auto;
 }
 
+#projects a {
+  color: var(--background);
+  text-decoration: none;
+}
+
+.project-title {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--background);
+}
+
 article {
   align-items: center;
 }
@@ -245,6 +259,7 @@ article {
 #projects img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 #projects .reverse .text {
@@ -271,7 +286,7 @@ article {
   max-width: 650px;
   margin: 0 auto;
   text-align: center;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   color: white;
 }
 
@@ -283,9 +298,15 @@ article {
 #contact .button {
   padding: 0.5rem;
   border-radius: 5px;
-  background-color: var(--secondary);
+  background-color: white;
   color: var(--text);
   border: black solid 2px;
+}
+
+#contact .button:hover {
+  background-color: var(--secondary);
+  color: white;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Container for the gradient line */
@@ -320,7 +341,7 @@ article {
   max-width: 650px;
   margin: 0 auto;
   text-align: center;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 }
 
 #footer h2 {
