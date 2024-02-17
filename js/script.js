@@ -38,6 +38,9 @@ function translate(languageCode) {
   document.getElementById('izba').innerHTML = currentTranslation.izba;
   document.getElementById('rights').innerHTML = currentTranslation.rights;
 
+  const resumeLinkElement = document.getElementById('nav-resume');
+  resumeLinkElement.href = currentTranslation.resumeLink;
+
   const flagImage = document.getElementById('current-flag');
   if (languageCode === 'en') {
     flagImage.src = 'img/Flag_of_Great_Britain_(English_version).png';

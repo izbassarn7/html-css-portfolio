@@ -24,6 +24,8 @@ const translations = {
     emailme: 'Email me',
     izba: 'Izbassar Nurlan &middot; Developer',
     rights: '&copy; 2024 Izbassar Nurlan. All rights reserved.',
+    resumeLink:
+      'https://drive.google.com/file/d/1bDuE-i92opD_CaA-1c8MOevw1T47f96M/view?usp=sharing',
   },
   ru: {
     myNameIs: 'Привет, меня зовут ',
@@ -50,5 +52,7 @@ const translations = {
     emailme: 'Напишите мне',
     izba: 'Избасар Нурлан &middot; Разработчик',
     rights: '&copy; 2024 Избасар Нурлан. Все права защищены.',
+    resumeLink:
+      'https://drive.google.com/file/d/1d5EIFkilM6K7NZZ1s8jB_obRM6xIYrqH/view?usp=sharing',
   },
 };
