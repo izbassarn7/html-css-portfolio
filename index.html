@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/logo.svg" />
     <title>Izbassar Nurlan's Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Yeseva+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display:wght@800&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script src="js/translations.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <nav>
@@ -23,16 +25,15 @@
         <li>
           <h1>
             <a href="#">
-              <span class="fa-solid fa-dragon" aria-hidden="true"></span>
-              Izbassar</a
-            >
+              <img src="img/logo_1.svg" alt="logo" height="40px" />
+            </a>
           </h1>
         </li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#projects" id="nav-projects">Projects</a></li>
+        <li><a href="#about" id="nav-about">About</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
         <li>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/izbassar-nurlan-56564423b/">
             <span class="fa-brands fa-linkedin" aria-hidden="true"></span>
             <span class="sr-only">LinkedIn</span>
           </a>
@@ -43,24 +44,42 @@
             <span class="sr-only">Github</span>
           </a>
         </li>
-        <li><a href="#" class="button">Resume</a></li>
+        <li><a href="#" id="nav-resume" class="button">Resume</a></li>
+        <li>
+          <div id="language-switcher">
+            <img
+              src="img/Flag_of_Great_Britain_(English_version).png"
+              alt="lang"
+              class="flag"
+              id="current-flag"
+            />
+          </div>
+        </li>
       </ul>
     </nav>
 
     <section id="intro">
-      <p class="name">Hello, my name is <span>Izbassar Nurlan.</span></p>
-      <h2>I develop the front end for websites and mobile applications.</h2>
-      <p>I'm a student and developer who specializes in React.</p>
-      <p>I am now studying at SDU.</p>
+      <div class="name">
+        <p id="intro-name">Hello, my name is</p>
+        <span id="intro-name-span">Izbassar Nurlan.</span>
+      </div>
+
+      <h2 id="intro-title">
+        I develop the front end for websites and mobile applications.
+      </h2>
+      <p id="intro-student">
+        I'm a student and developer who specializes in React.
+      </p>
+      <p id="intro-sdu">I am now studying at SDU.</p>
     </section>
 
     <div class="gradient"></div>
     <div id="projects-back">
       <div id="projects">
-        <h2>Projects I'm proud</h2>
+        <h2 id="proud">Projects I'm proud</h2>
         <article>
           <div class="text">
-            <h4>Latest Project</h4>
+            <h4 id="latest-project-title">Latest Project</h4>
             <a href="https://mini-musicapp.netlify.app/" target="_blank">
               <div class="project-title">
                 <i class="fa-solid fa-link"></i>
@@ -68,14 +87,14 @@
               </div>
             </a>
 
-            <p class="blackbox">
+            <p class="blackbox" id="minimusic-desc">
               MiniMusic is a lightweight, responsive web app for playing your
               favorite tunes. Enjoy a clean interface, intuitive controls, and
               smooth playback experience on any device. Built with React and
               @mui/material, MiniMusic prioritizes simplicity and ease of use
               while offering essential music player features.
             </p>
-            <h4>Technologies used:</h4>
+            <h4 id="technologies">Technologies used:</h4>
             <ul>
               <li>React</li>
               <li>@mui/material</li>
@@ -89,16 +108,24 @@
         </article>
         <article class="reverse">
           <div class="text">
-            <h4>My Diploma Project</h4>
-            <h3>KitapTap</h3>
-            <p class="blackbox">
+            <h4 id="diploma-project-title">My Diploma Project</h4>
+
+            <a href="https://github.com/izbassarn7/KitapTap" target="_blank">
+              <div class="project-title-reverse">
+                <i class="fa-brands fa-github"></i>
+                <h3>KitapTap</h3>
+              </div>
+            </a>
+
+            <p class="blackbox" id="kitaptap-desc">
               Book Crossing Almaty is a platform for book lovers and students in
               Almaty. This project aims to make book sharing and discovery easy
               and fun.
             </p>
-            <h4>Technologies used:</h4>
+            <h4 id="technologies2">Technologies used:</h4>
             <ul>
               <li>Next.js</li>
+              <li>React</li>
               <li>MongoDB</li>
               <li>TailwindCSS</li>
               <li>React Icons</li>
@@ -113,26 +140,28 @@
     <div class="gradient"></div>
     <div class="section-back">
       <section id="contact">
-        <h2>Contact me</h2>
+        <h2 id="contact-me">Contact me</h2>
 
-        <p>
+        <p id="contact-message">
           I'm currently seeking opportunities in front-end web and mobile
           development using React. If you have any exciting projects or job
           opportunities, feel free to reach out to me.
         </p>
 
         <p>
-          <a href="mailto:izbassarnurlan@gmail.com" class="button">Email me</a>
+          <a href="mailto:izbassarnurlan@gmail.com" class="button" id="email-me"
+            >Email me</a
+          >
         </p>
       </section>
     </div>
     <div class="gradient"></div>
 
     <section id="footer">
-      <h2>Izbassar Nurlan &middot; Developer</h2>
+      <h2 id="izba">Izbassar Nurlan &middot; Developer</h2>
       <ul>
         <li>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/izbassar-nurlan-56564423b/">
             <span class="fa-brands fa-linkedin" aria-hidden="true"></span>
             <span class="sr-only">LinkedIn</span>
           </a>
@@ -144,13 +173,17 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="mailto:izbassarnurlan@gmail.com">
             <span class="fa-solid fa-envelope" aria-hidden="true"></span>
             <span class="sr-only">Email</span>
           </a>
         </li>
       </ul>
-      <p><small>&copy; 2024 Izbassar Nurlan. All rights reserved.</small></p>
+      <p>
+        <small id="rights"
+          >&copy; 2024 Izbassar Nurlan. All rights reserved.</small
+        >
+      </p>
     </section>
   </body>
 </html>
